@@ -31,7 +31,7 @@ function Profiles() {
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
         >
-          <Avatar sx={{ width: 30, height: 30 }}
+          <Avatar sx={{ width: 34, height: 34 }}
             alt='Huan'
             src='https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/429956045_335786376129809_2672506687246116446_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Jpq1gD_hjlAQ7kNvgFnVXfg&_nc_ht=scontent.fhan5-9.fna&cb_e2o_trans=t&oh=00_AYC_uUoJldCtCLZEz16rJ-1EESvbvdVOTVQ9yhXVhGOn3A&oe=669D2F0A'
           />
