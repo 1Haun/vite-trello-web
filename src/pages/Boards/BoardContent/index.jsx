@@ -21,7 +21,7 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import GroupIcon from '@mui/icons-material/Group'
-import CommentIcon from '@mui/icons-material/Comment';
+import CommentIcon from '@mui/icons-material/Comment'
 import AttachmentIcon from '@mui/icons-material/Attachment'
 
 const COLUMN_HEADER_HEIGHT = '50px'
