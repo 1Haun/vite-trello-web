@@ -21,6 +21,7 @@ function Templates() {
   return (
     <Box>
       <Button
+        sx={{ color: 'white' }}
         id="basic-button-templates"
         aria-controls={open ? 'basic-menu-templates' : undefined}
         aria-haspopup="true"
@@ -28,7 +29,7 @@ function Templates() {
         onClick={handleClick}
         endIcon={<ExpandMoreIcon />}
       >
-                Templates
+        Templates
       </Button>
       <Menu
         id="basic-menu-templates"
@@ -52,7 +53,7 @@ function Templates() {
           <ListItemIcon>
             <Check />
           </ListItemIcon>
-                    Custom: 1.2
+          Custom: 1.2
         </MenuItem>
         <Divider />
         <MenuItem>
