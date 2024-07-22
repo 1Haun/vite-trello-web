@@ -21,7 +21,6 @@ function ListCards({ cards }) {
       '&::-webkit-scrollbar-thumb:hover': { backgroundColor: '#bdc3c7' }
     }}>
       {cards?.map(card => <Card key={card._id} card={card} />)}
-      {/* <Card /> */}
     </Box>
   )
 }
