@@ -106,22 +106,22 @@ function BoardBar({ board }) {
         >
           <Tooltip title="Huan">
             <Avatar alt="Huan"
-              src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/429956045_335786376129809_2672506687246116446_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Jpq1gD_hjlAQ7kNvgFnVXfg&_nc_ht=scontent.fhan5-9.fna&cb_e2o_trans=t&oh=00_AYC_uUoJldCtCLZEz16rJ-1EESvbvdVOTVQ9yhXVhGOn3A&oe=669D2F0A"
+              src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-1/429956045_335786376129809_2672506687246116446_n.jpg?stp=dst-jpg_p480x480&_nc_cat=110&ccb=1-7&_nc_sid=50d2ac&_nc_ohc=6DMVW8iOqd0Q7kNvgEDngr1&_nc_ht=scontent.fhan5-9.fna&cb_e2o_trans=t&oh=00_AYA0PM_xLk9QCk9KLe6RDEfSYNxLHr0kSG_4Eds7Hkvspw&oe=66A560D0"
             />
           </Tooltip>
           <Tooltip title="Huan">
             <Avatar alt="Huan"
-              src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/429956045_335786376129809_2672506687246116446_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Jpq1gD_hjlAQ7kNvgFnVXfg&_nc_ht=scontent.fhan5-9.fna&cb_e2o_trans=t&oh=00_AYC_uUoJldCtCLZEz16rJ-1EESvbvdVOTVQ9yhXVhGOn3A&oe=669D2F0A"
+              src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-1/429956045_335786376129809_2672506687246116446_n.jpg?stp=dst-jpg_p480x480&_nc_cat=110&ccb=1-7&_nc_sid=50d2ac&_nc_ohc=6DMVW8iOqd0Q7kNvgEDngr1&_nc_ht=scontent.fhan5-9.fna&cb_e2o_trans=t&oh=00_AYA0PM_xLk9QCk9KLe6RDEfSYNxLHr0kSG_4Eds7Hkvspw&oe=66A560D0"
             />
           </Tooltip>
           <Tooltip title="Huan">
             <Avatar alt="Huan"
-              src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/429956045_335786376129809_2672506687246116446_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Jpq1gD_hjlAQ7kNvgFnVXfg&_nc_ht=scontent.fhan5-9.fna&cb_e2o_trans=t&oh=00_AYC_uUoJldCtCLZEz16rJ-1EESvbvdVOTVQ9yhXVhGOn3A&oe=669D2F0A"
+              src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-1/429956045_335786376129809_2672506687246116446_n.jpg?stp=dst-jpg_p480x480&_nc_cat=110&ccb=1-7&_nc_sid=50d2ac&_nc_ohc=6DMVW8iOqd0Q7kNvgEDngr1&_nc_ht=scontent.fhan5-9.fna&cb_e2o_trans=t&oh=00_AYA0PM_xLk9QCk9KLe6RDEfSYNxLHr0kSG_4Eds7Hkvspw&oe=66A560D0"
             />
           </Tooltip>
           <Tooltip title="Huan">
             <Avatar alt="Huan"
-              src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/429956045_335786376129809_2672506687246116446_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Jpq1gD_hjlAQ7kNvgFnVXfg&_nc_ht=scontent.fhan5-9.fna&cb_e2o_trans=t&oh=00_AYC_uUoJldCtCLZEz16rJ-1EESvbvdVOTVQ9yhXVhGOn3A&oe=669D2F0A"
+              src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-1/429956045_335786376129809_2672506687246116446_n.jpg?stp=dst-jpg_p480x480&_nc_cat=110&ccb=1-7&_nc_sid=50d2ac&_nc_ohc=6DMVW8iOqd0Q7kNvgEDngr1&_nc_ht=scontent.fhan5-9.fna&cb_e2o_trans=t&oh=00_AYA0PM_xLk9QCk9KLe6RDEfSYNxLHr0kSG_4Eds7Hkvspw&oe=66A560D0"
             />
           </Tooltip>
         </AvatarGroup>
