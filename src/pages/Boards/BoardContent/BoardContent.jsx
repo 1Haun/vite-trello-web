@@ -72,7 +72,7 @@ function BoardContent({ board }) {
 
     //activeDraggingCard: la card dang dc keo
     const { id: activeDraggingCardId, data: { current: activeDraggingCardData } } = active
-    // overCard: la card dang duoc tuong tac tren hoac duoi so voi card duoc keo o tren 
+    // overCard: la card dang duoc tuong tac tren hoac duoi so voi card duoc keo o tren
     const { id: overCardId } = over
 
     // tim 2 column theo cardId
@@ -89,7 +89,7 @@ function BoardContent({ board }) {
         // tim vi tri (index) cua cai overCard trong column dich (noi ma activeCard sap duoc tha)
         const overCardIndex = overColumn?.cards?.findIndex(card => card._id === overCardId)
 
-        //logic tinh toan ' cardIndex moi' (tren hoac duoi overCard) lay chuan ra tu code cua thu vien 
+        //logic tinh toan ' cardIndex moi' (tren hoac duoi overCard) lay chuan ra tu code cua thu vien
         let newCardIndex
         const isBelowOverItem = active.rect.current.translated &&
           active.rect.current.translated.top > over.rect.top + over.rect.height
