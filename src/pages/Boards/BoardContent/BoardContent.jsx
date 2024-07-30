@@ -11,17 +11,17 @@ import {
   DragOverlay,
   defaultDropAnimationSideEffects,
   closestCorners,
-  closestCenter,
+  // closestCenter,
   pointerWithin,
-  rectIntersection,
+  // rectIntersection,
   getFirstCollision
 } from '@dnd-kit/core'
 import { useEffect, useState, useCallback, useRef } from 'react'
 import { arrayMove } from '@dnd-kit/sortable'
 import Column from './ListColumns/Column/Column'
 import Card from './ListColumns/Column/ListCards/Card/Card'
-import { cloneDeep } from 'lodash'
-
+import { cloneDeep, isEmpty } from 'lodash'
+import { generatePlaceholderCard } from '~/utils/formatters'
 const ACTIVE_DRAG_ITEM_TYPE = {
   COLUMN: 'ACTIVE_DRAG_ITEM_COLUMN',
   CARD: 'ACTIVE_DRAG_ITEM_CARD'
@@ -50,7 +50,7 @@ function BoardContent({ board }) {
   const [activeDragItemData, setActiveDragItemData] = useState(null)
   const [oldColumn, setOldColumn] = useState(null)
 
-  // diem va cham cuoi cung truoc do 
+  // diem va cham cuoi cung truoc do
   const lastOverId = useRef(null)
 
   useEffect(() => {
@@ -95,6 +95,11 @@ function BoardContent({ board }) {
         // xoa card o cai column active (cung co the hieu la column cu, cai luc ma keo card ra khoi no de sang column khac)
         nextActivedColumn.cards = nextActivedColumn.cards.filter(card => card._id !== activeDraggingCardId)
 
+        //them placeholdercard neu column rong : bi keo het card di, khong con cai nao nua
+        if (isEmpty(nextActivedColumn.cards)) {
+          nextActivedColumn.cards = [generatePlaceholderCard(nextActivedColumn)]
+        }
+
         // cap nhat lai mang cardOderIds cho chuan du lieu
         nextActivedColumn.cardOderIds = nextActivedColumn.cards.map(card => card._id)
       }
@@ -111,6 +116,10 @@ function BoardContent({ board }) {
         }
         //tiep theo them 1 cai card dang keo vao column theo vi tri index moi
         nextOverColumn.cards = nextOverColumn.cards.toSpliced(newCardIndex, 0, rebuild_activeDraggingCardData)
+
+        // xoa cai placeholders card di neu no dang ton tai
+        nextOverColumn.cards = nextOverColumn.cards.filter(card => !card.FE_PlaceholderCard)
+
         // cap nhat lai mang cardOderIds cho chuan du lieu
         nextOverColumn.cardOderIds = nextOverColumn.cards.map(card => card._id)
       }
@@ -260,24 +269,29 @@ function BoardContent({ board }) {
   }
 
   const collisionDetectionStrategy = useCallback((args) => {
+
     if (activeDragItemType === ACTIVE_DRAG_ITEM_TYPE.COLUMN) {
       return closestCorners({ ...args })
     }
 
-    //tim cac diem giao nhau, va cham
+    //tim cac diem giao nhau, va cham, tra ve 1 mang cac va cham
     const pointerIntersections = pointerWithin(args)
-    // thuat toan phat hien va cham se tra ve 1 mang cac va cham o day
-    const intersections = !!pointerIntersections?.length
-      ? pointerIntersections
-      : rectIntersection(args)
 
-    //tim overId dau tien trong dam intersection o tren
-    let overId = getFirstCollision(intersections, 'id')
+    //fix triet de bug flickerring cua thu vien dnd-kit trong truong hop sau:
+    // keo 1 card co image cover lon vao keo len phia tren cung ra khoi khu vuc keo tha
+    if (!pointerIntersections?.length) return
+    // thuat toan phat hien va cham se tra ve 1 mang cac va cham o day
+    // const intersections = !!pointerIntersections?.length
+    //   ? pointerIntersections
+    //   : rectIntersection(args)
+
+    //tim overId dau tien trong dam pointerIntersections o tren
+    let overId = getFirstCollision(pointerIntersections, 'id')
     if (overId) {
       const checkColumn = orderedColumns.find(column => column._id === overId)
       if (checkColumn) {
         // console.log('overId before: ', overId)
-        overId = closestCenter({
+        overId = closestCorners({
           ...args,
           droppableContainers: args.droppableContainers.filter(container => {
             return (container.id !== overId) && (checkColumn?.cardOderIds?.includes(container.id))
